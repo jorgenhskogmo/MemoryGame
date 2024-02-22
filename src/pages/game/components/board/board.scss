@@ -1,0 +1,70 @@
+$board-sizes: 2, 4, 6, 8;
+
+@mixin board($size) {
+  display: grid;
+  grid-template-columns: repeat($size, 1fr);
+  grid-template-rows: repeat($size, 1fr);
+  gap: 10px;
+}
+
+.board {
+  width: 90vw;
+  height: 90vw;
+  max-width: 500px;
+  max-height: 500px;
+  margin: auto;
+
+  @each $size in $board-sizes {
+    &.size-#{$size} {
+      @include board($size);
+    }
+  }
+
+  &-cell {
+    flex: 0 0 23%;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f2f2f280;
+    border-radius: 5px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+
+    .question-svg {
+      fill: #282a35;
+      max-height: 50%;
+    }
+
+    .hidden-svg {
+      display: none;
+      width: 40px;
+      height: 40px;
+      max-height: 50%;
+      fill: #f2f2f2f0;
+      filter: drop-shadow(1px 1px 1px #222);
+    }
+
+    &.flip {
+      background: #42bafb !important;
+      transform: perspective(100px) rotateY(180deg);
+
+      .question-svg {
+        display: none;
+      }
+
+      .hidden-svg {
+        display: block;
+        transform: perspective(100px) rotateY(180deg);
+      }
+    }
+
+    &.success {
+      background: #76db82 !important;
+    }
+
+    &:hover {
+      background: #d3d3d3;
+    }
+  }
+}

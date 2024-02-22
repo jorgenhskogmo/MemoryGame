@@ -1,0 +1,46 @@
+.gameover {
+  &-title {
+    color: #343434;
+    text-align: center;
+    font-family: QTKooper;
+    font-size: 32px;
+  }
+
+  &-body {
+    display: flex;
+    flex-direction: column;
+    justify-items: space-evenly;
+    align-items: center;
+    gap: 16px;
+
+    &-block {
+      &__text {
+        margin-top: 8px;
+      }
+    }
+  }
+
+  &-controls {
+    display: flex;
+    gap: 8px;
+
+    &__item {
+      display: grid;
+      place-items: center;
+      fill: #fff;
+      background: #343434;
+      border: 1px solid #222;
+      padding: 8px;
+      border-radius: 50%;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+}

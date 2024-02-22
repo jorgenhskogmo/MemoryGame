@@ -1,0 +1,5 @@
+export { default as move } from './move.mp3'
+export { default as win } from './win.mp3'
+export { default as reset } from './reset.mp3'
+export { default as success } from './success.mp3'
+export { default as whoosh } from './whoosh.wav'

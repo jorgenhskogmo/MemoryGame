@@ -1,0 +1,30 @@
+.change-level {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  margin: auto;
+  max-width: 200px;
+
+  &__item {
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    background: #ffffff4d;
+    font-size: 20px;
+    letter-spacing: 2px;
+    aspect-ratio: 1.1 / 1;
+    cursor: pointer;
+
+    &.active {
+      background: #f2f2f2;
+      box-shadow: inset 0 0 0 1px #8f8f8f;
+    }
+
+    &:hover {
+      background: #f2f2f2e4;
+    }
+  }
+}

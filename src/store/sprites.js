@@ -1,0 +1,17 @@
+export const images = [
+  'battery',
+  'camera',
+  'cloud',
+  'compass',
+  'gps',
+  'landing-pad',
+  'lipo-battery',
+  'motor',
+  'payload',
+  'propeller',
+  'remote-controller',
+  'signal',
+  'takeoff',
+  'telemetry',
+  'waypoint',
+]

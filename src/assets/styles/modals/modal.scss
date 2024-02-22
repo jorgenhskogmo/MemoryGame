@@ -1,0 +1,73 @@
+.popup {
+  &-overlay {
+    background-color: rgb(107 114 128 / 0.75);
+    transition: all 3s ease-in-out;
+    animation: appear 0.3s ease;
+  }
+
+  &-content {
+    padding: 15px;
+    transition-duration: 0.15s;
+    transition-property: all;
+    animation: anvil 0.3s forwards;
+    color: #222;
+    background: #fff;
+    box-shadow: 0 4px 23px 0 rgb(0 0 0 / 20%);
+    border-radius: 5px;
+    padding: 15px;
+    max-width: 400px;
+    width: 90vw;
+  }
+
+  &-title {
+    color: #222;
+    text-align: center;
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    border: none;
+    color: var(--text);
+    background: transparent;
+    transition: all 200ms;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    svg {
+      fill: none;
+    }
+  }
+}
+
+/* animations */
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes anvil {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.8, 0.8);
+  }
+  65.5% {
+    transform: scale(1.03, 1.03);
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
